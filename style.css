@@ -1,0 +1,543 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Freight Big Pro";
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#Loader {
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: none;
+    z-index: 9;
+}
+
+#Loader h1 {
+    font-size: 6.9vw;
+    font-weight: 100;
+    line-height: 5.5vw;
+    letter-spacing: -2px;
+    position: relative;
+    z-index: 9;
+}
+
+#Loader video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 6;
+}
+
+#yellow, #yellow2 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #F5E41B;
+}
+
+#yellow {
+    z-index: 8;
+}
+
+#yellow2 {
+    z-index: 7;
+}
+
+#nav {
+    position: absolute;
+    width: 100%;
+    padding: 20px 4px;
+    z-index: 11;
+}
+
+#nav svg path {
+    fill: rgb(3, 3, 3);
+}
+
+#page1, #page3, #page4, #page5 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#page1 {
+    background-color: #F5E41B;
+}
+
+#page1 h1 {
+    font-size: 6.9vw;
+    font-weight: 100;
+    line-height: 5.5vw;
+    letter-spacing: -2px;
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: azure;
+    transition: all ease 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.elem {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+.elem .blur{
+    position: absolute;
+    width: 40%;
+    left: 49%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+background: linear-gradient(to right,#F5E41B,#F5E41B,#F5E41B);
+    height: 100%;
+    box-shadow: 10px 0px 20px #F5E41B;
+z-index: 8;
+}
+.elem .blurno4{
+    position: absolute;
+    width: 40%;
+    left: 55%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+background: linear-gradient(to right,#F5E41B ,#F5E41B ,#F5E41B );
+    height: 100%;
+    box-shadow: 10px 0px 20px #F5E41B, 10px 0px 20px #F5E41B;
+
+z-index: 8;
+}
+
+.elem h2 {
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    font-weight: 100;
+    line-height: 5vw;
+    transition:all ease 0.6s ;
+    font-style: normal;
+    position: relative;
+    z-index: 9;
+}
+
+.elem .moving {
+    background-color: #F5E41B;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%) scaleY(0);
+    padding: 8px 0;
+    transition: all 0.5s ease;
+}
+
+.elem .moving .moving-in {
+    white-space: nowrap;
+    display: inline-block;
+    animation: moving 4s linear infinite;
+}
+
+.elem .moving .moving-in h5 {
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: gilroy;
+    text-transform: uppercase;
+    margin-right: 30px;
+    transition: all 0.5s ease 0.5s;
+}
+
+@keyframes moving {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.elem:hover .moving {
+    transform: translate(0, -45%) scaleY(1);
+}
+
+.elem:hover .moving h5 {
+    opacity: 1;
+}
+
+.elem:hover h2{
+    font-style: italic;
+}
+
+#page3 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
+}
+.image-container{
+    display: flex;
+   align-items: flex-start;
+   flex-wrap: wrap;
+padding: 20px;
+
+}
+.image-div{
+    height: 30vw;
+    width: 20vw;
+    background-color: #F5E41B;
+    position: relative;
+    margin: 10px;
+}
+
+.image-div img{
+height: 100%;
+width: 100%;
+object-position:top ;
+object-fit: cover;
+transition: all ease 0.5s;
+}
+.overlay{
+    position: absolute;
+height: 100%;
+width: 100%;
+background-color: #0000001b;
+align-items: center;
+color: #fff;
+justify-content: center;
+display: flex;
+padding: 20px;
+transition: all ease 1s;
+z-index: 9;
+}
+.overlay p{
+  font-size: 2vw;
+  text-transform: uppercase;
+  text-align: center;
+line-height: 2vw;
+opacity: 0;
+}
+
+.image-div:hover .overlay{
+background-color: #000000fa;}
+
+.image-div:hover .overlay p{
+    opacity: 1;}
+.image-div:hover img{
+    scale: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#page4 {
+    background-color: rgb(43, 0, 255);
+}
+
+#page5 {
+    background-color: rgb(83, 30, 206);
+    justify-content: space-evenly;
+}
+
+#page5 img {
+    height: 500px;
+    width: 300px;
+    object-fit: cover;
+    object-position: center;
+} */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Freight Big Pro";
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#Loader {
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* display: none; */
+    z-index: 9;
+}
+
+#Loader h1 {
+    font-size: 6.9vw;
+    font-weight: 100;
+    line-height: 5.5vw;
+    letter-spacing: -2px;
+    position: relative;
+    z-index: 9;
+}
+
+#Loader video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 6;
+}
+
+#yellow, #yellow2 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #F5E41B;
+}
+
+#yellow {
+    z-index: 8;
+}
+
+#yellow2 {
+    z-index: 7;
+}
+
+#nav {
+    position: absolute;
+    width: 100%;
+    padding: 20px 4px;
+    z-index: 11;
+}
+
+#nav svg path {
+    fill: rgb(3, 3, 3);
+}
+
+#page1, #page3, #page4, #page5 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#page1 {
+    background-color: #F5E41B;
+}
+
+#page1 h1 {
+    font-size: 6.9vw;
+    font-weight: 100;
+    line-height: 5.5vw;
+    letter-spacing: -2px;
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: azure;
+    transition: all ease 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+}
+
+.elem {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.elem .blur, .elem .blurno4 {
+    position: absolute;
+    width: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, #F5E41B, #F5E41B, #F5E41B);
+    height: 100%;
+    box-shadow: 10px 0px 20px #F5E41B;
+    z-index: 8;
+}
+
+.elem .blurno4 {
+    left: 55%;
+    box-shadow: 10px 0px 20px #F5E41B, 10px 0px 20px #F5E41B;
+}
+
+.elem h2 {
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    font-weight: 100;
+    line-height: 5vw;
+    transition: all ease 0.6s;
+    font-style: normal;
+    position: relative;
+    z-index: 9;
+}
+
+.elem .moving {
+    background-color: #F5E41B;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%) scaleY(0);
+    padding: 8px 0;
+    transition: all 0.5s ease;
+}
+
+.elem .moving .moving-in {
+    white-space: nowrap;
+    display: inline-block;
+    animation: moving 4s linear infinite;
+}
+
+.elem .moving .moving-in h5 {
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: gilroy;
+    text-transform: uppercase;
+    margin-right: 30px;
+    transition: all 0.5s ease 0.5s;
+}
+
+@keyframes moving {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.elem:hover .moving {
+    transform: translate(0, -45%) scaleY(1);
+}
+
+.elem:hover .moving h5 {
+    opacity: 1;
+}
+
+.elem:hover h2 {
+    font-style: italic;
+}
+
+#page3 {
+    min-height: 400vh;
+    width: 100%;
+    background-color: white;
+}
+
+.image-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center; /* Center items horizontally */
+}
+
+.image-div {
+    height: 30vw;
+    width: 20vw;
+    /* background-color: #F5E41B; */
+    position: relative;
+    margin: 10px;
+    overflow: hidden; /* Ensure that content doesn't overflow */
+}
+
+.image-div img {
+    height: 100%;
+    width: 100%;
+    object-position: top;
+    object-fit: cover;
+    transition: all ease 0.5s;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.11); /* Semi-transparent black */
+    align-items: center;
+    color: #fff;
+    justify-content: center;
+    display: flex;
+    padding: 20px;
+    transition: all ease 1s;
+    z-index: 9;
+    opacity: 0; /* Initially hidden */
+}
+
+.overlay p {
+    font-size: 2vw;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 2vw;
+}
+
+.image-div:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.98); /* Darker overlay on hover */
+    opacity: 1; /* Show overlay on hover */
+}
+
+.image-div:hover img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+#page4 {
+    background-color: rgb(43, 0, 255);
+}
+
+#page5 {
+    background-color: rgb(83, 30, 206);
+    justify-content: space-evenly;
+}
+
+#page5 img {
+    height: 500px;
+    width: 300px;
+    object-fit: cover;
+    object-position: center;
+}
