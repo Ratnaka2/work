@@ -35,3 +35,6 @@ elems.forEach(function (ele) {
     });
 });
 
+document.getElementById('page5').addEventListener('click', function() {
+    this.classList.toggle('clicked');
+});
